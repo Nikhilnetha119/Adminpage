@@ -1,22 +1,36 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Admin page with total stock</title>
-    </head>
-    <body>
+<html lang="en">
+<head>
+    <title>Admin</title>
+    <style>
+        body {
+            background-image: url('https://t4.ftcdn.net/jpg/03/60/29/63/360_F_360296349_2pm4h5a8NeCIVnBgFZip8Pt7WbEXdYeV.jpg'); 
+            background-repeat: no-repeat;
+            background-attachment:fixed;
+            background-size:cover; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align: center;">Seller's Admin Page</h1>
+        <form id="store-form">
+            <div class="form-group">
+                <label for="price">Selling Price : </label>
+                <input type="number"  id="price" placeholder="Enter the amount">
 
-        <label for="price">Selling price:</label>
-        <input type="text" id="price">
+                <label for="name">Product Name : </label>
+                <input type="text"  id="name" placeholder="Enter the product name">
 
-        <label for="Name">Product Name:</label>
-        <input type="text" id="Name">
-
-        <button type="submit" id="button">Add Product</button>
-
-        <h1>Products</h1>
-
-        <h3>Total value Worth of Products: </h3>
-
-
-    </body>
+                <button type="submit" class="btn btn-primary my-3">Add Product</button>
+            </div>
+        </form>
+        <h2>Products</h2>
+        <ul id="product-list">
+        </ul>
+        <h3 id="total-worth">Total Worth of Products: 0</h3>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.4/axios.min.js"></script>
+<script src="admin.js"></script>
 </html>
